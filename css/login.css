@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --txtColor: #000000;
+    --linkColor: #F94C10;
+}
+body {
+    height: 100vh;
+    background: url(assets/img/bg-background5.jpg);
+    background-size: cover;
+    overflow: hidden;
+    display: grid;
+    margin-left: 50px;
+    place-items: start;
+    align-items: center;
+    font-family: 'Poppins';
+}
+.loginForm {
+    width: 400px;
+    background: #ffffff21;
+    box-shadow: 0 0 1.9vh #151616;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+.loginForm h1 {
+    color: #3a0202;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 0 0 20px 0;
+    letter-spacing: 2px;
+    border-radius: 20px;
+    border-bottom: 2px solid #000;
+}
+.loginForm form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+form .inputField {
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid var(--txtColor);
+}
+.inputField input {
+    width: 100%;
+    padding: 0 5px;
+    font-size: 16px;
+    height: 40px;
+    outline: none;
+    border: none;
+    background: none;
+}
+.inputField i {
+    padding-right: 3px;
+}
+.inputField label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: var(--txtColor);
+    transform: translateY(-50%);
+    transition: .5s;
+}
+.inputField span::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    background: #ff0000;
+    transition: .7s;
+}
+.inputField input:focus ~ label,
+.inputField input:valid ~ label{
+    color: #f53232;
+    top: -5px;
+}
+.inputField input:focus ~ span::before,
+.inputField input:valid ~ span::before {
+    width: 100%;
+}
+.password-link {
+    margin: 5px 0 20px 0;
+    color: var(--linkColor);
+    cursor: pointer;
+}
+.password-link:hover {
+    text-decoration: underline;
+    color: #ff00f2;
+    text-decoration: none;
+}
+/* input[type=submit] {
+    width: 100%;
+    height: 50px;
+    border-radius: 125px;
+    border: 1px solid var(--txtColor);
+    background: none;
+    outline: none;
+    color: var(--txtColor);
+    font-size: 18px;
+    font-weight: 700;
+    transition:all .3s; 
+}
+input[type=submit]:hover {
+    background: #2691d9;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 20px #2691d9;
+    color: #fff;
+} */
+.registration-link {
+    color: var(--txtColor);
+    margin: 30px 0;
+    text-align: center;
+}
+.registration-link a {
+    color: var(--linkColor);
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.registration-link a:hover{
+    color: #ff00f2;
+}
+
+/* For Sign In Button */
+
+button{
+  background-color: transparent;
+  outline: none;
+  border: transparent;
+  cursor: pointer;    
+}
+
+.a{
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #000;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 10px;
+  margin-left: 100px;
+  letter-spacing: 3px
+}
+
+.a:hover{
+  background: #000;
+  color: #eee;
+  border-radius: 5px;
+}
+
+.a span{
+    position: absolute;
+    display: block;
+}
+
+.a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #000);
+    animation: btn-anim1 1.5s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+  
+    50%,100% {
+      left: 100%;
+    }
+  }
+
+  .a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #000);
+    animation: btn-anim2 1.5s linear infinite;
+    animation-delay: .375s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+  
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #000);
+    animation: btn-anim3 1.5s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+  
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #000);
+    animation: btn-anim4 1.5s linear infinite;
+    animation-delay: 1.125s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+  
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+
+.view-password {
+  border: transparent;
+  font-size: small;
+  display: flex;
+  align-items: center; 
+  position: absolute;
+  top: 240px;
+  cursor: default;
+}
+
+.view-password input {
+  cursor: pointer;
+}

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="css/assets/img/play fusion icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Swiper CSS by CDN -->
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+
+</head>
+<body>
+
+    <!-- overlay -->
+
+    <div class="overlay">
+        <i class="fa-solid fa-times" onclick="closeOverlay()"></i>
+        <div id="movie-trailer"></div>
+    </div>
+
+    <!-- Search overlay -->
+
+    <div id="myOverlay" class="search-overlay">
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
+        <div class="overlay-content">
+          <form action="#">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+    </div>
+
+    <!-- Header -->
+
+    <header class="header">
+        <div class="logo">
+            <img src="css/assets/img/Black & White Minimalist Business Logo.png" alt="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="html/got.html">Game of the Year</a></li>
+                <li><a href="#coming-soon">Coming Soon</a></li>
+                <li><a href="#top-rated">Top Rated</a></li>
+                <li><a href="#footer">About Us</a></li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-magnifying-glass" onclick="openSearch()"></i></a>
+                </li>
+                <li>
+                    <!-- <a href="login.html" target="_blank"><i class="fa-solid fa-user"></i></a> -->
+                    <div class="dropdown">
+                        <i class="fa-solid fa-user dropbtn"></i>
+                        <div class="dropdown-content">
+                          <a href="html/login.html">Sign In</a>
+                          <a href="html/singup.html">Sign Up</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div> 
+    </header>
+
+    <!-- Banner -->
+
+    <div class="banner" id="home">
+
+        <!-- Slider main container -->  
+        <div class="swiper bannerSwiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="css/assets/img/residentevli4.jpg" alt="resident evil 4">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/assets/img/assasins creed.jpg" alt="assasins creed 3">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/assets/img/mortal kombat.jpg" alt="mortal kombat">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/assets/img/god of war rag.jpg" alt="god of war ragnarok">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/assets/img/gta v.jpg" alt="gta v">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/assets/img/cyberpunk.png" alt="cyberpunk">
+                </div>
+            </div>
+            </div>
+
+        </div>
+
+    <!-- Content -->
+
+    <div class="content">
+
+        <div class="title">
+            <div id="title">
+                <h1>Resident Evil 4</h1>
+            </div>
+            <div id="sub-title">
+                <p>Action, Adventure, Horror</p>
+            </div>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <span>8.987</span>
+            </div>
+            <div class="buttons">
+                <button class="btn-sec">
+                    <i class="fa-solid fa-users"></i>
+                    Reviews
+                </button>
+                <button class="btn-sec" onclick="showTrailer()">
+                    <i class="fa-solid fa-play"></i>
+                    Trailer
+                </button>
+            </div>
+        </div>
+
+        <div class="desc">
+            <!-- Swiper navigation buttons -->
+            <div class="navigation-btn">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div id="desc">
+                <p>Six years have passed since the biological disaster in Raccoon City.
+                    Agent Leon S. Kennedy, one of the survivors of the incident, has been sent to rescue the president's kidnapped daughter.
+                    He tracks her to a secluded European village, where there is something terribly wrong with the locals.</p>
+            </div>
+            <button class="btn-primary">
+                <i class="fa-solid fa-shopping-chart"></i>
+                Add to kart
+            </button>
+        </div>
+        <!-- Swiper pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Thumbnail -->
+
+    <div class="thumbs">
+        <div thumbsSlider="" class="swiper thumbsSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="css/assets/img/resident evil 4 thumb.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/assets/img/assasins creed thumb.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/assets/img/mortal kombat thumbs.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/assets/img/god of war rag thumbs.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/assets/img/gta v thumb.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/assets/img/cyberpunk thumbs.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Second Main Content -->
+
+    <div class="second-main">
+
+        <div class="nav" id="top-rated">
+            <p>Top rated games for you !</p>
+        </div>
+
+        <div class="product-main">
+
+            <div class="product-row">
+
+                <div class="product">
+
+                    <img class="img" src="css/assets/img/products/a way out.jpg">
+
+                    <div class="product-overlay">A Way Out</div>
+
+                </div>
+
+                <div class="product">
+
+                    <img src="css/assets/img/products/Bamboo.jpg">
+
+                    <div class="product-overlay">Bamboo</div>
+
+                </div>
+
+                <div class="product">
+
+                    <img src="css/assets/img/products/bloodborne.jpg">
+
+                    <div class="product-overlay">Bloodborne</div>
+
+                </div>
+
+                <div class="product">
+
+                    <img src="css/assets/img/products/the last of us part 2.jpg">
+
+                    <div class="product-overlay">the last of us 2</div>
+
+                </div>
+
+                <div class="product">
+
+                    <img src="css/assets/img/products/crash team recing.jpg">
+
+                    <div class="product-overlay">crash: team racing</div>
+
+                </div>
+
+            </div>
+
+            <div class="product-row">
+
+                <div class="product">
+
+                    <img src="css/assets/img/products/dark souls.jpg">
+
+                    <div class="product-overlay">dark souls</div>
+
+                </div>
+
+                <div class="product">
+
+                    <img src="css/assets/img/products/far cry 5.jpg">
+
+                    <div class="product-overlay">farcry 5</div>
+
+                </div>
+
+                <div class="product">
+
+                    <img src="css/assets/img/products/final shot.jpg">
+
+                    <div class="product-overlay">final shot</div>
+
+                </div>
+
+                <div class="product">
+
+                    <img src="css/assets/img/products/god of war deluxe.jpg">
+
+                    <div class="product-overlay">god of war deluxe</div>
+
+                </div>
+
+                <div class="product">
+
+                    <img src="css/assets/img/products/Hogwards legacy.jpg">
+
+                    <div class="product-overlay">hogwards legacy</div>
+
+                </div>
+
+            </div>
+
+            <div class="product-row">
+
+                <div class="product">
+
+                    <img src="css/assets/img/products/horizon forbidden.jpg">
+
+                    <div class="product-overlay">horizon forbidden</div>
+
+                </div>
+
+                <div class="product">
+
+                    <img src="css/assets/img/products/Injustice 2.jpg">
+
+                    <div class="product-overlay">Injustice 2</div>
+
+                </div>
+
+                <div class="product">
+
+                    <img src="css/assets/img/products/jurasik park.jpg">
+
+                    <div class="product-overlay">jurasik park</div>
+
+                </div>
+
+                <div class="product">
+
+                    <img src="css/assets/img/products/low story.jpg">
+
+                    <div class="product-overlay">low story</div>
+                    
+                </div>
+
+                <div class="product">
+
+                    <img src="css/assets/img/products/mafia.jpg">
+
+                    <div class="product-overlay">mafia</div>
+
+                </div>
+
+            </div>
+
+            <div class="page-indicator">
+            
+                <a href="#" class="next">Load More &raquo;</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PS5 section -->
+
+    <div class="ps5-section">
+
+        
+        <div class="content-ps5">
+            <span>Introducing the PS5 console and accessories</span>
+            <span>PlayStation 5 Console</span>
+            <span>Experience an all-new generation of incredible PlayStation games.</span>
+            <a href="#" class="next"> find out more &raquo;</a>
+        </div>
+        <div class="img-ps5">
+            <img src="css/assets/img/ps5console.png">
+        </div>
+        
+
+    </div>
+
+    <!-- Weekly Top 3 Games -->
+
+    <div class="top3">
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="css/assets/img/Winners/gta v.jpg">
+              </div>
+              <div class="flip-card-back">
+                <h1>GTA V</h1> 
+                <p>Downloads : 2,43,123</p> 
+                <p>Rating : 4.8</p>
+              </div>
+            </div>
+            <h1>FIRST</h1>
+            <span>Weekly toppers</span>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="css/assets/img/Winners/elden rign.jpg">
+              </div>
+              <div class="flip-card-back">
+                <h1>ELDEN RING</h1> 
+                <p>Downloads : 2,04,453</p> 
+                <p>Rating : 4.9</p>
+              </div>
+            </div>
+            <h1>SECOND</h1>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="css/assets/img/Winners/minecraft.jpg">
+              </div>
+              <div class="flip-card-back">
+                <h1>MINECRAFT</h1> 
+                <p>Downloads : 1,78,342</p> 
+                <p>Rating : 4.7</p>
+              </div>
+            </div>
+            <h1>THIRD</h1>
+        </div>
+
+    </div>
+
+    <!-- Coming Soon Games -->
+
+    <div class="coming-soon" id="coming-soon">
+
+        <div class="cs-container">
+            <span>Coming Soon</span>
+            <img src="css/assets/img/Coming Soon/Avatar.jpg" style="width:100%;">
+            <div class="text-block">
+              <h4>Avatar: Frontiers of Pandora</h4>
+              <p>Play the full story campaign in single-player or with a friend online in two-player co-op.</p>
+            </div>
+        </div>
+
+        <div class="cs-container">
+            <img src="css/assets/img/Coming Soon/Test.jpg">
+            <div class="text-block">
+              <h4>.T.E.S.T: Expected Behaviour</h4>
+              <p>You can even control time. But will it help?</p>
+            </div>
+        </div>
+
+        <div class="cs-container">
+            <img src="css/assets/img/Coming Soon/Exoprimal.jpg" style="width:100%;">
+            <div class="text-block">
+              <h4>Exoprimal</h4>
+              <p>This product entitles you to download both the digital version game</p>
+            </div>
+        </div>
+
+        <div class="cs-container">
+            <img src="css/assets/img/Coming Soon/The lord of the tings.jpg" style="width:100%;">
+            <div class="text-block">
+              <h4>The Lord of the Rings: Return to Moria</h4>
+              <p>Follows reclaim their legendary home of Moria beneath the Misty Mountains</p>
+            </div>
+        </div>
+
+        <div class="cs-container">
+            <img src="css/assets/img/Coming Soon/Vertigo 2.jpg" style="width:100%;">
+            <div class="text-block">
+              <h4>Vertigo 2</h4>
+              <p>Vertigo 2 is a single-player adventure built from the ground up for VR.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer Section -->
+
+    <footer class="footer-section" id="footer">
+
+        <div class="social-icons">
+
+            <span>Get connected with us on social networks!</span>
+
+            <ul>
+                <li><a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-x-twitter fa-2x"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-github fa-2x"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube fa-2x"></i></a></li>
+            </ul>
+
+        </div>
+
+        <div class="footer-main">
+
+            <div class="footer-main-content">
+
+                <div class="footer-title-div">
+
+                    <p class="footer-title">play fusion</p>
+
+                </div>
+
+                <div class="footer-title-down">
+
+                    <a href="#home"><img src="css/assets/img/Black & White Minimalist Business Logo.png" alt="logo"></a>
+
+                    <p>Play hundreds of incredible PS5, PS4 and classic PlayStation games, and discover epic adventures, unique indies, family favourites, and everything in between.</p>
+
+                </div>
+                
+            </div>
+
+            <div class="footer-main-content">
+
+                <div class="footer-title-div">
+
+                    <p class="footer-title">products</p>
+
+                </div>
+
+                <div class="footer-title-down">
+
+                    <p><a href="#">PS4</a></p>
+                    <p><a href="#">PS5</a></p>
+                    <p><a href="#">Accessories</a></p>
+                    <p><a href="#">Games</a></p>
+               
+                </div>
+                
+            </div>
+
+            <div class="footer-main-content">
+
+                <div class="footer-title-div">
+
+                    <p class="footer-title">Useful links</p>
+
+                </div>
+
+                <div class="footer-title-down">
+
+                    <p><a href="login.html">Your Account</a></p>
+                    <p><a href="#">Forgetton Password</a></p>
+                    <p><a href="#">Terms and Conditions</a></p>
+                    <p><a href="#">Help</a></p>
+               
+                </div>
+                
+            </div>
+
+            <div class="footer-main-content">
+
+                <div class="footer-title-div">
+
+                    <p class="footer-title">Contact</p>
+
+                </div>
+
+                <div class="footer-title-down footer-contact">
+
+                    <p><i class="fa-solid fa-location-arrow"></i><a href="#">Velachery, Chennai</a></p>
+                    <p><i class="fa-solid fa-envelope"></i><a href="#">playfusion@gmail.com</a></p>
+                    <p><i class="fa-solid fa-mobile"></i><a href="#">+91 63791 63256</a></p>
+                    <p><i class="fa-solid fa-phone-volume"></i><a href="#">+044 1201 1310</a></p>
+               
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div class="copyright">
+
+            <span>©2023 Copyright :</span> <span>Suriya</span>
+
+        </div>
+
+    </footer>
+
+    <!-- Swiper JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="javascripts/index.js"></script>
+
+    
+</body>
+</html>

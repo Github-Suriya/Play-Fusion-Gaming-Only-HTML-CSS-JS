@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login Form</title>
+  <link rel="icon" href="../css/assets/img/play fusion icon.png">
+  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="loginForm">
+    <h1>Welcome Back!</h1>
+    <form action="../index.html">
+      <div class="inputField">
+        <input type="text" required>
+        <label>
+          <i class="fa-solid fa-user"></i>
+          Username:</label>
+        <span></span>
+      </div>
+      <div class="inputField">
+        <input type="password" required id="vp">
+        <label>
+          <i class="fa-solid fa-lock"></i>
+          Password:</label> 
+        <span></span>
+      </div>
+      <div class="view-password"> <input type="checkbox" id="view-password" onclick="viewPass()"> Show Password </div>
+      <div class="password-link">Forgot Password?</div>
+      <!-- <input type="submit" value="Login"> -->
+      <button type="submit" class="a">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Sign In
+      </button>
+      <div class="registration-link">
+        Not a Member? <a href="singup.html">Signup</a>
+      </div>
+    </form>
+  </div>
+
+  <script src="../javascripts/login.js"></script>
+
+</body>
+</html>
